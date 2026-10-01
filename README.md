@@ -1,7 +1,5 @@
 # Meridian Room
 
-A small public slip board. Accounts, private notes, and a featured brief that changes every hour.
+A public slip board. The featured hour changes every sixty minutes. Sign in to keep a drawer of notes. Mark a slip public and it lands on the wall.
 
-Public slips show on the wall. Private slips stay in the drawer of the person who wrote them.
-
-Supabase project: `tqfocdktvjuwoiyfgesb`
+Live: wait for Vercel after this push.
