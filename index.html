@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Meridian Room</title>
+  <meta name="description" content="A public slip board. The feature changes every hour. Private notes stay in your drawer." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,460;9..144,620&family=IBM+Plex+Mono:wght@400;500&family=Literata:opsz,wght@7..72,420;7..72,560&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <header class="mast">
+    <a class="mark" href="#wall">
+      <span class="mark-clock" id="markClock" aria-hidden="true">
+        <i class="hand hour"></i>
+        <i class="hand minute"></i>
+      </span>
+      <span>
+        <strong>Meridian Room</strong>
+        <em>slips, kept by the hour</em>
+      </span>
+    </a>
+    <nav class="nav" id="nav">
+      <a href="#wall" data-route="wall">Wall</a>
+      <a href="#desk" data-route="desk">Desk</a>
+      <a href="#drawer" data-route="drawer">Drawer</a>
+    </nav>
+    <div class="session" id="sessionSlot"></div>
+  </header>
+
+  <main id="app"></main>
+
+  <footer class="colophon">
+    <span id="tickLabel">—</span>
+    <span>Public slips stay on the wall. Everything else stays with you.</span>
+  </footer>
+
+  <dialog id="authDialog">
+    <form id="authForm" method="dialog">
+      <p class="eyebrow" id="authEyebrow">Account</p>
+      <h2 id="authTitle">Come in</h2>
+      <label class="field" id="nameField">
+        <span>Name on the slip</span>
+        <input name="display_name" autocomplete="nickname" maxlength="40" placeholder="Ada Voss" />
+      </label>
+      <label class="field">
+        <span>Email</span>
+        <input name="email" type="email" required autocomplete="email" />
+      </label>
+      <label class="field">
+        <span>Password</span>
+        <input name="password" type="password" required minlength="8" autocomplete="current-password" />
+      </label>
+      <p class="form-note" id="authNote"></p>
+      <div class="form-row">
+        <button type="submit" class="ink" id="authSubmit">Sign in</button>
+        <button type="button" class="ghost" id="authSwitch">Need an account?</button>
+        <button type="button" class="ghost" id="authClose">Close</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
